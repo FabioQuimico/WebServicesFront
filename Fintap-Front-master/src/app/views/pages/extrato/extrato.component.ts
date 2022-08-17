@@ -41,12 +41,7 @@ export class ExtratoComponent implements OnInit {
   constructor(private compraService: CompraService) { }
 
   ngOnInit(): void {
-    this.nomeMes = MESES[this.mes];
-    this.compraService.getCompras(this.mes, this.ano).subscribe(
-      comprasComp => {comprasComp.forEach(
-        compraComp => this.montaCompra(compraComp)
-        );}
-    );
+
   }
 
   private montaCompra(compraComp: compraCompleta) {
@@ -60,11 +55,10 @@ export class ExtratoComponent implements OnInit {
 
   ngOnChanges(): void {
     this.nomeMes = MESES[this.mes];
+    this.compras = [];
     this.compraService.getCompras(this.mes, this.ano).subscribe(
       comprasComp => {
-        comprasComp.forEach(
-          compraComp => {this.montaCompra(compraComp);}
-        );
+        comprasComp.forEach(compraComp => {this.montaCompra(compraComp);});
       }
     );
   }

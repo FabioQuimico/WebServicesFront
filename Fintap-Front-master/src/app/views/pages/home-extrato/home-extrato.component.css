@@ -77,6 +77,8 @@ ul {
 ul li {
    display: inline;
    margin-right: 10px;
+   margin: 0px;
+    padding: 1px 7px;
 }
 
 .caixa-extrato-data {
@@ -85,15 +87,24 @@ ul li {
    padding-bottom: 5px;
    border-radius: 0px 0px 5px 5px;
 }
-li a {
+li span {
    color: var(--texto);
    text-decoration: none;
 }
-.meses ul li a:hover {
+.meses ul li span:hover {
    color: var(--primary);
    font-weight: bold;
+   cursor: pointer;
 }
-.anos ul li a:hover {
+.anos ul li span:hover {
    color: var(--branco);
+   font-weight: bold;
+   cursor: pointer;
+}
+.mesSelected{
+   font-weight: bold;
+}
+
+.anoSelected{
    font-weight: bold;
 }

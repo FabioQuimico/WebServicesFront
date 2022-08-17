@@ -9,25 +9,12 @@
 
       <div class="anos">
          <ul>
-            <li><a href="#" (click)="setAno(2020)">2020</a></li>
-            <li><a href="#" (click)="setAno(2021)">2021</a></li>
-            <li><a href="#" (click)="setAno(2022)">2022</a></li>
+            <li  *ngFor="let ano of anos" [ngClass]="[ isSelectedAno == this.ano ? 'mesSelected' : '']"><span (click)="setAno(ano)" >{{ano}}</span></li>
          </ul>
       </div>
       <div class="meses">
          <ul>
-            <li><a href="#" (click)="setMes(1)">Jan</a></li>
-            <li><a href="#" (click)="setMes(2)">Fev</a></li>
-            <li><a href="#" (click)="setMes(3)">Mar</a></li>
-            <li><a href="#" (click)="setMes(4)">Abr</a></li>
-            <li><a href="#" (click)="setMes(5)">Mai</a></li>
-            <li><a href="#" (click)="setMes(6)">Jun</a></li>
-            <li><a href="#" (click)="setMes(7)">Jul</a></li>
-            <li><a href="#" (click)="setMes(8)">Ago</a></li>
-            <li><a href="#" (click)="setMes(9)">Set</a></li>
-            <li><a href="#" (click)="setMes(10)">Out</a></li>
-            <li><a href="#" (click)="setMes(11)">Nov</a></li>
-            <li><a href="#" (click)="setMes(12)">Dez</a></li>
+            <li  *ngFor="let mes of meses" [ngClass]="[ isSelectedMes == this.mes ? 'mesSelected' : '']"><span (click)="setMes(mes)" >{{mesesNome[mes-1]}}</span></li>
          </ul>
       </div>
 

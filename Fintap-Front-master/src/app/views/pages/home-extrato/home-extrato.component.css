@@ -77,6 +77,8 @@ ul {
 ul li {
    display: inline;
    margin-right: 10px;
+   margin: 0px;
+    padding: 1px 7px;
 }
 
 .caixa-extrato-data {
@@ -98,4 +100,11 @@ li span {
    color: var(--branco);
    font-weight: bold;
    cursor: pointer;
+}
+.mesSelected{
+   font-weight: bold;
+}
+
+.anoSelected{
+   font-weight: bold;
 }

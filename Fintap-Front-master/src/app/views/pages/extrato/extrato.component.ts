@@ -55,7 +55,10 @@ export class ExtratoComponent implements OnInit {
 
   ngOnChanges(): void {
     this.nomeMes = MESES[this.mes];
+    // Inicializa as compras pra nova data e o total pra zero
     this.compras = [];
+    this.total = 0;
+    // Carrega todas as compras do mês e ano selecionados
     this.compraService.getCompras(this.mes, this.ano).subscribe(
       comprasComp => {
         comprasComp.forEach(compraComp => {this.montaCompra(compraComp);});
